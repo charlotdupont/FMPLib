@@ -1,8 +1,7 @@
-from threading import Thread
+from sniffio import AsyncLibraryNotFoundError, current_async_library
 
-
-class ReturnThread(Thread):
-    
-    def __init__(self, *args, **kwargs):
-        Thread.__init__(self, *args, **kwargs)
-        self.value = {}
+try:
+    print(current_async_library())
+except AsyncLibraryNotFoundError:
+    print("No Context")
+    pass
