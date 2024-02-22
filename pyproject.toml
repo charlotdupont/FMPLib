@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "fmplib"
+version = "0.1.0"
+description = ""
+authors = ["charlotdupont <charlo.dupont@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12.1"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+cache_dir = ".cache"
